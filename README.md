@@ -13,7 +13,7 @@ This is the official PyTorch codes for the paper:
 [Kwan-Yee K. Wong](http://i.cs.hku.hk/~kykwong/)  
 
 <p align="left">
-    <img src='src/teaser.gif' width="80%">
+    <img src='src/teaser.gif' width="50%">
 </p>
 
 *We present **Unsupervised Concept Extraction (UCE)** that focuses on the fully *unsupervised* problem of extracting *multiple* concepts from a *single* image.*
