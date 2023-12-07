@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConceptExpress</title>
+  <!-- <link rel="icon" type="assets/png" href="" /> -->
+  <!-- <link rel="canonical" href="" /> -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-71Y5XX2NRF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-97476543-1');
+    </script>
+
+  <!-- Meta tags -->
+  <meta name="keywords" content="ConceptExpress, concept extraction, diffusion models, text-to-image generation">
+  <meta property="og:site_name" content="ConceptExpress">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="ConceptExpress: Harnessing Diffusion Models for Single-image Unsupervised Concept Extraction">
+  <meta name="description" content="The first method to use diffusion models for single-image concept extraction under an unsupervised setting.">
+  <meta property="og:description" content="The first method to use diffusion models for single-image concept extraction under an unsupervised setting.">
+
+  <!-- <meta property="og:image" content="">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="300"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css" />
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script type="text/javascript" src="./static/slick/slick.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <!-- Authors, institutions and links -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title"><span class="method-name">ConceptExpress</span>: Harnessing Diffusion Models for Single-image Unsupervised Concept Extraction
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">Shaozhe Hao</a>,
+              </span>
+              <span class="author-block">
+                <a href="">Kai Han</a>,
+              </span>
+              <span class="author-block">
+                <a href="">Zhengyao Lv</a>,
+              </span>
+              <span class="author-block">
+                <a href="">Shihao Zhao</a>,
+              </span>
+              <span class="author-block">
+                <a href="">Kwan-Yee K. Wong</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">The University of Hong Kong</span>
+            </div>
+
+            <!-- <div>
+              <p style="font-size:23px;font-weight:bold;padding-top: 5px;"></p>
+            </div> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>PDF</span>
+                  </a>
+                </span>
+
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div id="teaser" class="has-text-centered">
+          <!-- <img style="width: 100%;" src="./static/images/teaser.gif" alt="ConceptExpress teaser."> -->
+          <video id="teaser" autoplay muted loop playsinline width="70%">
+            <source src="./static/src/teaser.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <!-- <video id="teaser" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+          <source src="static/videos/SpaText_Teaser.mp4" type="video/mp4">
+        </video> -->
+
+        <h2 class="subtitle has-text-centered">
+          <p>
+          <strong>Unsupervised Concept Extraction (UCE)</strong>: <span class="highlight">We focus on the
+          fully <i>unsupervised</i> problem of extracting <i>multiple</i> concepts from
+          a <i>single</i> image.</span> Given an image that contains multiple concepts
+          (e.g., Star Wars characters C-3PO, R2-D2, and desert), we aim to
+          harness a frozen pretrained diffusion model to automatically learn
+          the conceptual tokens. Using the learned conceptual tokens, we
+          can regenerate the extracted concepts with high quality.
+          </p>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              While personalized text-to-image generation has enabled the learning of a single concept from multiple images, a more practical yet challenging scenario involves learning multiple concepts within a single image. However, existing works tackling this scenario heavily rely on extensive human annotations.
+In this paper, we introduce a novel task named <strong>Unsupervised Concept Extraction (UCE)</strong> that considers a fully unsupervised setting without any human knowledge of the concepts.
+Given an image that contains multiple concepts, the task aims to extract and recreate individual concepts solely relying on the existing knowledge from pretrained diffusion models. 
+To address this problem, we present <span class="method-name">ConceptExpress</span> that tackles UCE by unleashing the inherent capabilities of pretrained diffusion models in two aspects. Specifically, a concept localization approach automatically locates and disentangles salient concepts by leveraging spatial correspondence provided by diffusion self-attention; and based on the lookup association between a concept and a conceptual token, a concept-wise optimization process learns discriminative tokens that represent each individual concept.
+Finally, we establish an evaluation protocol tailored for the UCE task. Extensive experiments show the effectiveness of <span class="method-name">ConceptExpress</span>, demonstrating it to be a promising solution to UCE.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper video. -->
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <div class="content has-text-justified">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Video</h2>
+                <div class="publication-video">
+                  <iframe src="" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Method explanation -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title is-3">Method</h2>
+
+          <div class="content has-text-justified">
+
+            <div class="container" style="text-align: center;">
+              <img width="65%" src="./static/src/pipe.png"/>
+              <br />
+            </div>
+
+            <p>
+            <span class="method-name">ConceptExpress</span> can <u class="highlight">disentangle each concept in the compositional scene</u> 
+            and <u class="highlight">learn discriminative conceptual tokens that represent each individual concept</u>. 
+            </p>
+            
+            <p>
+            <span class="method-name">ConceptExpress</span> presents <strong>two major innovations</strong>: 
+            <ul>
+            <li>
+              <u class="highlight">For concept disentanglement</u>, we propose a concept localization approach that automatically locates salient concepts within the image. 
+              This approach involves clustering spatial points on the self-attention map, building upon the observation that stable diffusion has learned good unsupervised spatial correspondence in the self-attention layers. 
+            </li>
+            <li>
+              <u class="highlight">For conceptual token learning</u>, we employ concept-wise masked denoising optimization by reconstructing the located concept. 
+              This optimization is based on a token lookup table that associates each located concept with its corresponding conceptual token. 
+            </li>
+            </ul>
+            </p>
+
+            <div style="text-align: center;">
+            <h5>
+            <p>See more method details in our paper!</p>
+            </h5>
+            </div>
+            <!-- <p><i></i></p> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene Breaking Examples -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h2 class="title is-3">Results</h2>
+          <h3 class="title is-4">Unsupervised concept extraction</h3>
+          <div class="content has-text-justified">
+
+            <div class="container" style="text-align: center;">
+              <img width="80%" src="./static/src/compare.png"/>
+              <br />
+            </div>
+            <p>
+              Bas<span><sup>&#8224;</sup></span>: Break-a-Scene adpated in the unsupervised setting by leveraging the instance masks identified by our method as the ground-truth segmentation masks.
+            </p>
+          </div>
+
+  <!-- Entangled Scene Decomposition -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-12">
+          <h3 class="title is-4">Text-guided generation</h3>
+          <div class="content has-text-justified">
+            <p>
+              <span class="method-name">ConceptExpress</span> is also capable of text-guided generation:
+            </p>
+          </div>
+
+          <!-- Example 1-->
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/src.png" />
+                    <p class="caption prompt">Source image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/v1.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-a"></span></p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/v2.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-b"></span></p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/v3.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-c"></span></p>
+                  </div>
+                </div>
+                <br />
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-1.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> and <span class="token-c"></span> with a city in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-2.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> with sunflowers around it"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-3.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> on top of a dirt road"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-4.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-c"></span> with a beautiful sunset"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-5.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> in a luxurious living room"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-6.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> in the snow"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-7.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> with a mountain in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-8.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> in the snow"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-9.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> with the Eiffel Tower in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-10.png" />
+                    <p class="caption prompt">"<span class="token-c"></span> in the jungle"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-11.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> on a cobblestone street"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample1/gen/gen-12.png" />
+                    <p class="caption prompt">"<span class="token-c"></span> at the beach"</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <br />
+          <!-- Example 2
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/src.png" />
+                    <p class="caption prompt">Source image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/v1.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-a"></span></p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/v2.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-b"></span></p>
+                  </div>
+                </div>
+
+                <br />
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-1.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> and <span class="token-c"></span> with a city in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-2.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> with sunflowers around it"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-3.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> on top of a dirt road"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-4.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-c"></span> with a beautiful sunset"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-5.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> in a luxurious living room"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-6.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> in the snow"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-7.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> with a mountain in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-8.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> in the snow"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-9.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> with the Eiffel Tower in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-10.png" />
+                    <p class="caption prompt">"<span class="token-c"></span> in the jungle"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-11.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> on a cobblestone street"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section> -->
+
+          <br />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <p>If you find this project useful for your research, please cite the following:</p>
+
+      <pre><code>
+      </code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <p>
+          This page was adapted from <a href="https://omriavrahami.com/break-a-scene/">this</a> source code.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
