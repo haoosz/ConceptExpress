@@ -63,24 +63,28 @@
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="">Shaozhe Hao</a>,
+                <a href="https://haoosz.github.io/">Shaozhe Hao</a>,
               </span>
               <span class="author-block">
-                <a href="">Kai Han</a>,
+                <a href="https://www.kaihan.org/">Kai Han</a>,
               </span>
               <span class="author-block">
-                <a href="">Zhengyao Lv</a>,
+                <a href="https://scholar.google.com/citations?user=FkkaUgwAAAAJ">Zhengyao Lv</a>,
               </span>
               <span class="author-block">
-                <a href="">Shihao Zhao</a>,
+                <a href="https://shihaozhaozsh.github.io/">Shihao Zhao</a>,
               </span>
               <span class="author-block">
-                <a href="">Kwan-Yee K. Wong</a>
+                <a href="https://i.cs.hku.hk/~kykwong/">Kwan-Yee K. Wong</a>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">The University of Hong Kong</span>
+            </div>
+            
+            <div class="venue">
+              <strong><font size="5" color="SteelBlue">ECCV 2024</font></strong>
             </div>
 
             <!-- <div>
@@ -122,7 +126,7 @@
 
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href=""
+                  <a href="https://github.com/haoosz/ConceptExpress"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -144,7 +148,7 @@
       <div class="hero-body">
         <div id="teaser" class="has-text-centered">
           <!-- <img style="width: 100%;" src="./static/images/teaser.gif" alt="ConceptExpress teaser."> -->
-          <video id="teaser" autoplay muted loop playsinline width="70%">
+          <video id="teaser" autoplay muted loop playsinline width="100%">
             <source src="./static/src/teaser.mp4"
                     type="video/mp4">
           </video>
@@ -157,9 +161,8 @@
         <h2 class="subtitle has-text-centered">
           <p>
           <strong>Unsupervised Concept Extraction (UCE)</strong>: <span class="highlight">We focus on the
-          fully <i>unsupervised</i> problem of extracting <i>multiple</i> concepts from
-          a <i>single</i> image.</span> Given an image that contains multiple concepts
-          (e.g., Star Wars characters C-3PO, R2-D2, and desert), we aim to
+          <i>unsupervised</i> problem of extracting <i>multiple</i> concepts from
+          a <i>single</i> image.</span> Given an image that contains multiple concepts, we aim to
           harness a frozen pretrained diffusion model to automatically learn
           the conceptual tokens. Using the learned conceptual tokens, we
           can regenerate the extracted concepts with high quality.
@@ -220,7 +223,7 @@ Finally, we establish an evaluation protocol tailored for the UCE task. Extensiv
           <div class="content has-text-justified">
 
             <div class="container" style="text-align: center;">
-              <img width="65%" src="./static/src/pipe.png"/>
+              <img width="80%" src="./static/src/pipe.png"/>
               <br />
             </div>
 
@@ -266,7 +269,7 @@ Finally, we establish an evaluation protocol tailored for the UCE task. Extensiv
           <div class="content has-text-justified">
 
             <div class="container" style="text-align: center;">
-              <img width="80%" src="./static/src/compare.png"/>
+              <img width="100%" src="./static/src/compare.png"/>
               <br />
             </div>
             <p>
@@ -365,7 +368,7 @@ Finally, we establish an evaluation protocol tailored for the UCE task. Extensiv
           </section>
 
           <br />
-          <!-- Example 2
+          <!-- Example 2 -->
           <section class="hero is-light is-small">
             <div class="hero-body">
               <div class="container">
@@ -388,52 +391,155 @@ Finally, we establish an evaluation protocol tailored for the UCE task. Extensiv
                 <div id="results-carousel" class="carousel results-carousel">
                   <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-1.png" />
-                    <p class="caption prompt">"<span class="token-b"></span> and <span class="token-c"></span> with a city in the background"</p>
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> with a wheat field"</p>
                   </div>
                   <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-2.png" />
-                    <p class="caption prompt">"<span class="token-a"></span> with sunflowers around it"</p>
+                    <p class="caption prompt">"<span class="token-a"></span> in the jungle"</p>
                   </div>
                   <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-3.png" />
-                    <p class="caption prompt">"<span class="token-a"></span> on top of a dirt road"</p>
+                    <p class="caption prompt">"<span class="token-a"></span> in the snow"</p>
                   </div>
                   <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-4.png" />
-                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-c"></span> with a beautiful sunset"</p>
+                    <p class="caption prompt">"<span class="token-a"></span> with a sunset"</p>
                   </div>
                   <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-5.png" />
-                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> in a luxurious living room"</p>
+                    <p class="caption prompt">"<span class="token-b"></span> with a sunset"</p>
                   </div>
                   <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-6.png" />
-                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> in the snow"</p>
-                  </div>
-                  <div class="item has-text-centered">
-                    <img src="./static/src/sample2/gen/gen-7.png" />
-                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> with a mountain in the background"</p>
-                  </div>
-                  <div class="item has-text-centered">
-                    <img src="./static/src/sample2/gen/gen-8.png" />
                     <p class="caption prompt">"<span class="token-b"></span> in the snow"</p>
                   </div>
                   <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-7.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> in the jungle"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample2/gen/gen-8.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> among skyscrapers"</p>
+                  </div>
+                  <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-9.png" />
-                    <p class="caption prompt">"<span class="token-b"></span> with the Eiffel Tower in the background"</p>
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> in a movie theater"</p>
                   </div>
                   <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-10.png" />
-                    <p class="caption prompt">"<span class="token-c"></span> in the jungle"</p>
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> floating on top of water"</p>
                   </div>
                   <div class="item has-text-centered">
                     <img src="./static/src/sample2/gen/gen-11.png" />
-                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> and <span class="token-c"></span> on a cobblestone street"</p>
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> on a cobblestone street"</p>
                   </div>
                 </div>
               </div>
             </div>
-          </section> -->
+          </section>
+
+          <br />
+
+          <!-- Example 3 -->
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/src.png" />
+                    <p class="caption prompt">Source image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/v1.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-a"></span></p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/v2.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-b"></span></p>
+                  </div>
+                </div>
+
+                <br />
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/gen/gen-1.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span>"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/gen/gen-2.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> among the skyscrapers in New York city"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/gen/gen-3.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> floating on top of water"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/gen/gen-4.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> with a beautiful sunset"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/gen/gen-5.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> with a tree and autumn leaves in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample3/gen/gen-6.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> in the snow"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <br />
+
+          <!-- Example 4 -->
+          <section class="hero is-light is-small">
+            <div class="hero-body">
+              <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/src.png" />
+                    <p class="caption prompt">Source image</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/v1.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-a"></span></p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/v2.png" />
+                    <p class="caption prompt">Extracted concept: <span class="token-b"></span></p>
+                  </div>
+                </div>
+
+                <br />
+                <div id="results-carousel" class="carousel results-carousel">
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/gen/gen-1.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> with a beautiful sunset"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/gen/gen-2.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> floating on top of water"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/gen/gen-3.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> with a city in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/gen/gen-4.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span>"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/gen/gen-5.png" />
+                    <p class="caption prompt">"<span class="token-a"></span> and <span class="token-b"></span> with a wheat field in the background"</p>
+                  </div>
+                  <div class="item has-text-centered">
+                    <img src="./static/src/sample4/gen/gen-6.png" />
+                    <p class="caption prompt">"<span class="token-b"></span> on top of pink fabric"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           <br />
         </div>
@@ -442,7 +548,7 @@ Finally, we establish an evaluation protocol tailored for the UCE task. Extensiv
   </section>
 
 
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <p>If you find this project useful for your research, please cite the following:</p>
@@ -450,7 +556,7 @@ Finally, we establish an evaluation protocol tailored for the UCE task. Extensiv
       <pre><code>
       </code></pre>
     </div>
-  </section>
+  </section> -->
 
   <footer class="footer">
     <div class="container">
