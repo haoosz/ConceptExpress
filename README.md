@@ -19,4 +19,4 @@ This is the official PyTorch codes for the paper:
 
 [**Project Page**](https://haoosz.github.io/ConceptExpress/)
 
-## 💻 Code is coming soon!
+## 💻 Code is coming soon before this week!
