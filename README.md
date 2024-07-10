@@ -1,6 +1,6 @@
 # ConceptExpress
 ![License](https://img.shields.io/github/license/haoosz/ConceptExpress?color=lightgray)
-[![arXiv](https://img.shields.io/badge/%20-b31b1b)](http://arxiv.org/abs/2407.07077)
+[![arXiv](https://img.shields.io/badge/arXiv-2407.07077%20-b31b1b)](http://arxiv.org/abs/2407.07077)
 
 This is the official PyTorch codes for the paper:  
 
