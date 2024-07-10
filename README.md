@@ -1,10 +1,10 @@
 # ConceptExpress
 ![License](https://img.shields.io/github/license/haoosz/ConceptExpress?color=lightgray)
-<!-- [![arXiv](https://img.shields.io/badge/%20-b31b1b)]() -->
+[![arXiv](https://img.shields.io/badge/%20-b31b1b)](http://arxiv.org/abs/2407.07077)
 
 This is the official PyTorch codes for the paper:  
 
-[**ConceptExpress: Harnessing Diffusion Models for Single-image Unsupervised Concept Extraction**]()  
+[**ConceptExpress: Harnessing Diffusion Models for Single-image Unsupervised Concept Extraction**](http://arxiv.org/abs/2407.07077)  
 [Shaozhe Hao](https://haoosz.github.io/),
 [Kai Han](https://www.kaihan.org/), 
 [Zhengyao Lv](https://scholar.google.com/citations?user=FkkaUgwAAAAJ),
