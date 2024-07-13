@@ -1,0 +1,15 @@
+accelerate launch --num_processes 1 --main_process_port 20660 --gpu_ids 0, train.py \
+  --seed 20 \
+  --instance_data_dir uce_images/69 \
+  --num_of_assets 50 \
+  --merge_step 100 \
+  --phase1_train_steps 500 \
+  --phase2_train_steps 0 \
+  --output_dir ckpts/test \
+  --no_prior_preservation \
+  --checkpointing_steps 100 \
+  --initial_learning_rate 5e-4 \
+  --num_split_tokens 5 \
+  --weight_contrast 1e-3 \
+  --temperature 0.07 \
+  --lambda_attention 1e-5

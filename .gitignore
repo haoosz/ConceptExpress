@@ -1,9 +1,7 @@
 __pycache__
 */__pycache__
-checkpoints/
-generation/
-images/
-clustering/
-emd/
-scripts/
-utils/
+uce_images/
+ckpts/
+output/
+scripts/train_ft.sh
+scripts/infer_ft.sh
