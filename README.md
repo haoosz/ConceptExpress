@@ -56,7 +56,7 @@ If you use this code in your research, please consider citing our paper:
 ```bibtex
 @InProceedings{hao2024conceptexpress,
     title={Concept{E}xpress: Harnessing Diffusion Models for Single-image Unsupervised Concept Extraction}, 
-    author={Shaozhe Hao and Kai Han and Zhengyao Lv and Shihao Zhao and Kwan-Yee K. Wong},
+    author={Shaozhe Hao and Kai Han and Zhengyao Lv and Shihao Zhao and Kwan-Yee~K. Wong},
     booktitle={ECCV},
     year={2024},
 }
