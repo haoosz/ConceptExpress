@@ -10,7 +10,8 @@ This is the official PyTorch codes for the paper:
 [Zhengyao Lv](https://scholar.google.com/citations?user=FkkaUgwAAAAJ),
 [Shihao Zhao](https://shihaozhaozsh.github.io/),
 [Kwan-Yee K. Wong](http://i.cs.hku.hk/~kykwong/)  
-ECCV 2024
+The University of Hong Kong  
+*ECCV 2024*
 
 <p align="left">
     <img src='src/teaser.gif' width="90%">
