@@ -11,7 +11,7 @@ This is the official PyTorch codes for the paper:
 [Shihao Zhao](https://shihaozhaozsh.github.io/),
 [Kwan-Yee K. Wong](http://i.cs.hku.hk/~kykwong/)  
 The University of Hong Kong  
-*ECCV 2024*
+*ECCV 2024 (**Oral**)*
 
 <p align="left">
     <img src='src/teaser.gif' width="90%">
